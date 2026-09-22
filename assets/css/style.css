@@ -1,0 +1,417 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f0fdf4; /* Nuansa hijau sangat lembut (emerald light) */
+  color: #1b2e28;
+}
+
+header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #cce9e3;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1100px;
+  margin: auto;
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+nav a {
+  color: #334e48;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:first-child {
+  margin-right: auto;
+  color: #0f766e;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+nav a:hover {
+  color: #0f766e;
+}
+
+main {
+  width: 100%;
+}
+
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 40px;
+  color: #113832;
+  font-weight: 700;
+}
+
+/* HERO SECTION */
+#hero {
+  max-width: none;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0f766e, #115e59);
+  color: white;
+}
+
+#hero h1 {
+  max-width: 800px;
+  font-size: 46px;
+  line-height: 1.25;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+#hero p {
+  max-width: 650px;
+  font-size: 18px;
+  margin-bottom: 35px;
+  color: #ccfbf1;
+}
+
+#hero a {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #ffffff;
+  color: #0f766e;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 30px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#hero a:hover {
+  transform: translateY(-3px);
+  background: #f4fbf9;
+  box-shadow: 0 10px 25px rgba(15, 118, 110, 0.3);
+}
+
+/* KEUNGGULAN SECTION */
+#keunggulan {
+  background: #ffffff;
+  max-width: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding-left: max(20px, calc((100% - 1060px) / 2));
+  padding-right: max(20px, calc((100% - 1060px) / 2));
+  border-top: 1px solid #e6f4f1;
+  border-bottom: 1px solid #e6f4f1;
+}
+
+#keunggulan h2 {
+  grid-column: 1 / -1;
+}
+
+#keunggulan article {
+  background: #f8fafc;
+  padding: 35px 30px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+#keunggulan article:hover {
+  transform: translateY(-5px);
+  border-color: #0f766e;
+  box-shadow: 0 15px 30px -10px rgba(15, 118, 110, 0.12);
+  background: #ffffff;
+}
+
+#keunggulan h3 {
+  color: #0f766e;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#keunggulan p {
+  color: #5c7670;
+  font-size: 15px;
+}
+
+/* ALUR SECTION */
+#alur {
+  background: #f4fbf9;
+  max-width: none;
+  padding-left: max(20px, calc((100% - 800px) / 2));
+  padding-right: max(20px, calc((100% - 800px) / 2));
+}
+
+#alur ol {
+  max-width: 700px;
+  margin: auto;
+  padding-left: 0;
+  list-style: none;
+  counter-reset: alur-counter;
+}
+
+#alur li {
+  counter-increment: alur-counter;
+  background: white;
+  margin-bottom: 15px;
+  padding: 20px 22px;
+  border-radius: 12px;
+  border-left: 5px solid #0f766e;
+  border: 1px solid #cce9e3;
+  border-left-width: 5px;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.04);
+  position: relative;
+  font-weight: 500;
+  color: #334e48;
+}
+
+/* MEDIA SECTION */
+#media {
+  text-align: center;
+  background: #ffffff;
+  max-width: none;
+}
+
+#media img,
+#media video {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+#media h3 {
+  margin-top: 35px;
+  color: #113832;
+  font-size: 22px;
+}
+
+#media p {
+  margin-top: 15px;
+  color: #5c7670;
+}
+
+#media a {
+  color: #0f766e;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#media a:hover {
+  text-decoration: underline;
+}
+
+/* KONTAK SECTION */
+#kontak {
+  text-align: center;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+#kontak p {
+  margin: 8px 0;
+  color: #5c7670;
+}
+
+/* FOOTER */
+footer {
+  background: #113832;
+  color: #a7f3d0;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 14px;
+}
+
+/* KATALOG TABLE SECTION */
+#katalog {
+  width: 90%;
+  max-width: 1100px;
+  margin: 60px auto;
+}
+
+#katalog h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+  color: #113832;
+}
+
+#katalog table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px -10px rgba(15, 118, 110, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+#katalog th,
+#katalog td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #edf2f7;
+}
+
+#katalog th {
+  background: #0f766e;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+#katalog tr:last-child td {
+  border-bottom: none;
+}
+
+#katalog tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* Kolom biaya */
+#katalog td:nth-child(3) {
+  font-weight: 600;
+  color: #113832;
+}
+
+/* Kolom sisa kursi */
+#katalog td:nth-child(5) {
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Kolom status */
+#katalog td:nth-child(6) {
+  font-weight: 600;
+}
+
+/* BADGES */
+.badge-full,
+.badge-available {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.badge-full {
+  background: #ffe4e6;
+  color: #e11d48;
+}
+
+.badge-available {
+  background: #d1fae5;
+  color: #059669;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    min-height: auto;
+  }
+
+  nav a:first-child {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  #hero {
+    min-height: 420px;
+    padding: 60px 20px;
+  }
+
+  #hero h1 {
+    font-size: 32px;
+  }
+
+  #hero p {
+    font-size: 15px;
+  }
+
+  #keunggulan {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #alur {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #katalog {
+    width: 95%;
+    overflow-x: auto;
+  }
+
+  #katalog table {
+    min-width: 750px;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  section h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+    font-size: 13px;
+  }
+
+  #hero h1 {
+    font-size: 26px;
+  }
+
+  #hero a {
+    padding: 12px 22px;
+  }
+
+  section h2 {
+    font-size: 24px;
+  }
+}
