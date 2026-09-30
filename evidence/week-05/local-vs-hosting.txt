@@ -1,0 +1,11 @@
+LOCAL VS HOSTING - WEEK 05
+
+LOCAL
+URL: http://localhost/kursusku-prototype/
+
+HOSTING
+URL: Belum di-hosting.
+
+KESIMPULAN
+Website berhasil dijalankan secara lokal menggunakan Laragon.
+Hosting belum dilakukan.

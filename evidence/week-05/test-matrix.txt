@@ -1,0 +1,58 @@
+TEST MATRIX - WEEK 05
+Nama: MUHAMAD RIDWAN
+Project: kursusku-prototype
+
+1. Required field
+Input: Form dikirim tanpa mengisi field wajib
+Hasil: Browser menolak pengiriman form
+Status: PASS
+
+2. Email validation
+Input: Mengisi email dengan format yang tidak valid
+Hasil: Browser menolak input email
+Status: PASS
+
+3. Minimal length
+Input: Nama diisi kurang dari batas minimal
+Hasil: Browser menolak input karena panjang nama kurang dari batas minimal
+Status: PASS
+
+4. GET
+Input: Form menggunakan method GET
+Hasil: Data form tampil pada URL sebagai query string
+Status: PASS
+
+5. POST
+Input: Form menggunakan method POST
+Hasil: Data diterima oleh process-registration.php dan ditampilkan pada halaman hasil
+Status: PASS
+
+6. Radio button
+Input: Memilih jenis peserta Mahasiswa
+Hasil: Jenis peserta tampil pada hasil pendaftaran
+Status: PASS
+
+7. Checkbox
+Input: Memilih Frontend dan Backend
+Hasil: Kedua pilihan tampil pada hasil pendaftaran
+Status: PASS
+
+8. Textarea
+Input: Mengisi catatan pendaftaran
+Hasil: Catatan tampil pada hasil pendaftaran
+Status: PASS
+
+9. Hidden field
+Input: source=week-05
+Hasil: Nilai source tampil sebagai week-05 pada hasil pendaftaran
+Status: PASS
+
+10. Navigasi
+Input: Klik Beranda, Katalog, dan Daftar
+Hasil: Halaman/section berpindah sesuai link
+Status: PASS
+
+11. Mobile
+Input: Tampilan browser sekitar 360px
+Hasil: Form tetap dapat digunakan dan tidak berantakan
+Status: PASS
