@@ -1,0 +1,834 @@
+/* =========================================================
+   RESET & DASAR
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: #f0fdf4;
+    color: #1b2e28;
+}
+
+/* =========================================================
+   HEADER / NAVIGASI
+   ========================================================= */
+
+header {
+    width: 92%;
+    max-width: 1100px;
+    margin: 12px auto 0;
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid #e2eee9;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(15, 118, 110, 0.08);
+    position: sticky;
+    top: 12px;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 0 24px;
+}
+
+nav a {
+    color: #334e48;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+nav a:first-child {
+    margin-right: auto;
+    color: #0f766e;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: #0f766e;
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+main {
+    width: 100%;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+#hero {
+    width: 92%;
+    max-width: 1100px;
+    min-height: 430px;
+    margin: 25px auto 0;
+    padding: 70px 55px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    text-align: left;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(240, 253, 250, 0.98) 0%,
+            rgba(240, 253, 250, 0.96) 42%,
+            rgba(240, 253, 250, 0.55) 65%,
+            rgba(240, 253, 250, 0.15) 100%
+        ),
+        url("../images/hero-kursus.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    box-shadow: 0 18px 45px rgba(15, 118, 110, 0.10);
+    overflow: hidden;
+}
+
+#hero h1 {
+    max-width: 570px;
+    font-size: 42px;
+    line-height: 1.18;
+    margin-bottom: 18px;
+    color: #113832;
+    font-weight: 750;
+    letter-spacing: -1px;
+}
+
+#hero p {
+    max-width: 550px;
+    font-size: 16px;
+    color: #526c65;
+    margin-bottom: 18px;
+}
+
+#hero p:last-child {
+    margin-top: 8px;
+}
+
+#hero a {
+    display: inline-block;
+    padding: 13px 24px;
+
+    background: #0f766e;
+    color: white;
+
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+
+    border-radius: 30px;
+
+    box-shadow: 0 8px 20px rgba(15, 118, 110, 0.20);
+
+    transition: all 0.25s ease;
+}
+
+#hero a:hover {
+    background: #0d5f59;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(15, 118, 110, 0.28);
+}
+
+/* =========================================================
+   JUDUL SECTION
+   ========================================================= */
+
+section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 32px;
+    color: #113832;
+    font-weight: 700;
+}
+
+/* =========================================================
+   KEUNGGULAN
+   ========================================================= */
+
+#keunggulan {
+    width: 92%;
+    max-width: 1100px;
+    margin: 25px auto;
+
+    padding: 40px;
+
+    background: #ffffff;
+    border: 1px solid #e2eee9;
+    border-radius: 22px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    box-shadow: 0 12px 35px rgba(15, 118, 110, 0.07);
+}
+
+#keunggulan h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
+}
+
+#keunggulan article {
+    padding: 28px 24px;
+    background: #f8fcfa;
+    border: 1px solid #dceee8;
+    border-radius: 16px;
+
+    transition: all 0.3s ease;
+}
+
+#keunggulan article:hover {
+    transform: translateY(-5px);
+    background: #ffffff;
+    border-color: #8ed5c9;
+    box-shadow: 0 12px 28px rgba(15, 118, 110, 0.10);
+}
+
+#keunggulan h3 {
+    color: #0f766e;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#keunggulan p {
+    color: #607770;
+    font-size: 14px;
+}
+
+/* =========================================================
+   KATALOG
+   ========================================================= */
+
+#katalog {
+    width: 92%;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 35px;
+
+    background: #ffffff;
+    border: 1px solid #e2eee9;
+    border-radius: 22px;
+
+    box-shadow: 0 12px 35px rgba(15, 118, 110, 0.07);
+
+    overflow-x: auto;
+}
+
+#katalog h2 {
+    text-align: left;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+#katalog table {
+    width: 100%;
+    min-width: 760px;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    background: white;
+
+    border: 1px solid #e2eee9;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+#katalog th,
+#katalog td {
+    padding: 13px 15px;
+    text-align: left;
+    border-bottom: 1px solid #edf3f1;
+}
+
+#katalog th {
+    background: #eaf8f4;
+    color: #31544d;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#katalog td {
+    color: #536963;
+    font-size: 13px;
+}
+
+#katalog tbody tr {
+    transition: background 0.2s ease;
+}
+
+#katalog tbody tr:hover {
+    background: #f5fbf8;
+}
+
+#katalog tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Harga */
+#katalog td:nth-child(3) {
+    color: #113832;
+    font-weight: 700;
+}
+
+/* Sisa kursi */
+#katalog td:nth-child(5) {
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Status */
+#katalog td:nth-child(6) {
+    font-weight: 600;
+}
+
+/* =========================================================
+   BADGE STATUS
+   ========================================================= */
+
+.badge-available,
+.badge-full {
+    display: inline-block;
+
+    padding: 5px 11px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.badge-available {
+    background: #dff7ed;
+    color: #07805f;
+}
+
+.badge-full {
+    background: #ffe4e6;
+    color: #d12a4b;
+}
+
+/* =========================================================
+   TOMBOL DAFTAR KURSUS
+   ========================================================= */
+
+.btn-primary {
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    background: #0f766e;
+    color: #ffffff !important;
+
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #0d5f59;
+    transform: translateY(-1px);
+}
+
+/* =========================================================
+   CARA MENDAFTAR
+   ========================================================= */
+
+#alur {
+    width: 92%;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2eee9;
+    border-radius: 22px;
+
+    box-shadow: 0 12px 35px rgba(15, 118, 110, 0.06);
+}
+
+#alur h2 {
+    text-align: left;
+    font-size: 25px;
+}
+
+#alur ol {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 25px;
+}
+
+#alur li {
+    padding: 10px 0;
+    color: #526c65;
+    font-size: 15px;
+}
+
+/* =========================================================
+   MEDIA
+   ========================================================= */
+
+#media {
+    width: 92%;
+    max-width: 1100px;
+    margin: 25px auto;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2eee9;
+    border-radius: 22px;
+
+    box-shadow: 0 12px 35px rgba(15, 118, 110, 0.06);
+
+    text-align: center;
+}
+
+#media h2 {
+    text-align: left;
+}
+
+#media h3 {
+    margin: 25px 0 12px;
+    color: #113832;
+    font-size: 20px;
+}
+
+#media img,
+#media video {
+    display: block;
+
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+
+    margin: 15px auto;
+
+    border-radius: 14px;
+
+    border: 1px solid #dceee8;
+
+    box-shadow: 0 10px 25px rgba(15, 118, 110, 0.08);
+}
+
+#media p {
+    margin-top: 15px;
+    color: #607770;
+    font-size: 14px;
+}
+
+#media a {
+    color: #0f766e;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#media a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   KONTAK
+   ========================================================= */
+
+#kontak {
+    width: 92%;
+    max-width: 1100px;
+    margin: 25px auto;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2eee9;
+    border-radius: 22px;
+
+    box-shadow: 0 12px 35px rgba(15, 118, 110, 0.06);
+
+    text-align: center;
+}
+
+#kontak h2 {
+    margin-bottom: 20px;
+}
+
+#kontak p {
+    margin: 7px 0;
+    color: #607770;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+    margin-top: 40px;
+
+    background: #113832;
+    color: #d1fae5;
+
+    text-align: center;
+
+    padding: 28px 20px;
+
+    font-size: 13px;
+}
+
+/* =========================================================
+   HALAMAN PENDAFTARAN
+   ========================================================= */
+main.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.form-card {
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 18px 0;
+}
+
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    color: #0f766e;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-wrap nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-wrap nav a {
+    color: #334e48;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-wrap nav a:hover {
+    color: #0f766e;
+}
+
+.page-intro {
+    padding: 45px 0 25px;
+}
+
+.eyebrow {
+    color: #0f766e;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.page-intro h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #113832;
+}
+
+.page-intro p {
+    color: #5c7670;
+}
+
+.form-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(15, 118, 110, 0.08);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 40px;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label,
+.form-group legend {
+    font-weight: 600;
+    color: #113832;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-family: inherit;
+
+    background: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0f766e;
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.choice-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    border: none;
+    padding: 0;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    background: #f4fbf9;
+    border: 1px solid #cce9e3;
+    border-radius: 8px;
+}
+
+.choice input {
+    width: auto;
+}
+
+.btn-primary {
+    border: none;
+    cursor: pointer;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        width: 94%;
+    }
+
+    nav {
+        min-height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+        padding: 15px;
+    }
+
+    nav a:first-child {
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    #hero {
+        width: 94%;
+        min-height: 400px;
+        padding: 55px 35px;
+
+        background-position: center;
+    }
+
+    #hero h1 {
+        max-width: 500px;
+        font-size: 34px;
+    }
+
+    #hero p {
+        font-size: 15px;
+    }
+
+    #keunggulan {
+        width: 94%;
+        grid-template-columns: 1fr;
+        padding: 30px 25px;
+    }
+
+    #katalog,
+    #alur,
+    #media,
+    #kontak {
+        width: 94%;
+    }
+
+    #katalog {
+        overflow-x: auto;
+    }
+
+    #media img,
+    #media video {
+        max-width: 100%;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE - HP
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    header {
+        width: 94%;
+        border-radius: 14px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    nav a:first-child {
+        font-size: 19px;
+    }
+
+    #hero {
+        width: 94%;
+        min-height: 430px;
+
+        padding: 40px 24px;
+
+        background-position: 65% center;
+    }
+
+    #hero h1 {
+        font-size: 28px;
+        max-width: 100%;
+    }
+
+    #hero p {
+        font-size: 14px;
+    }
+
+    #hero a {
+        padding: 11px 19px;
+        font-size: 13px;
+    }
+
+    #keunggulan,
+    #katalog,
+    #alur,
+    #media,
+    #kontak {
+        width: 94%;
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    section h2,
+    #katalog h2,
+    #alur h2 {
+        font-size: 23px;
+    }
+
+    #katalog table {
+        min-width: 760px;
+    }
+
+    .form-card {
+        padding: 20px 16px;
+    }
+
+    .choice-group {
+        flex-direction: column;
+    }
+
+    .choice {
+        width: 100%;
+    }
+}
+main.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.form-card {
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+/* Tombol daftar di bawah judul katalog */
+.katalog-action {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.btn-daftar {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #0f766e;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.btn-daftar:hover {
+    background: #0d5f59;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(15, 118, 110, 0.2);
+}
