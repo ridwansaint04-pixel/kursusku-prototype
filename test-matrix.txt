@@ -1,0 +1,26 @@
+Pertemuan 6 - Test Matrix KursusKu
+
+01 Mahasiswa + Web Dasar + 1 paket => Rp 240.000 : PASS
+02 Guru + PHP Dasar + 1 paket => Rp 340.000 : PASS
+03 Umum + Laravel Dasar + 1 paket => Rp 500.000 : PASS
+04 Mahasiswa + Web Dasar + 2 paket => Rp 480.000 : PASS
+No. 5
+Skenario Pengujian : Nama kosong
+Hasil yang Diharapkan : Nama wajib diisi
+Hasil Aktual : Browser menahan pengiriman karena field wajib
+Status : Berhasil
+No. 6
+Skenario Pengujian : Email tidak valid
+Hasil yang Diharapkan : Format email tidak valid
+Hasil Aktual : Browser menahan pengiriman karena format email tidak valid
+Status : Berhasil
+07 Tidak memilih minat => “Belum memilih minat.” tanpa warning : PASS
+08 Pilih 3 minat => Frontend, Backend, dan Database tampil di ringkasan : PASS
+09 Metode offline => Tatap Muka tampil di ringkasan : PASS
+10 Metode hybrid => Hybrid tampil di ringkasan : PASS
+11 Akses langsung process.php => kembali/redirect ke register.php : PASS
+12 Fasilitas kursus => fasilitas baru muncul otomatis dengan foreach : PASS
+
+Catatan:
+Pengujian menyesuaikan form pendaftaran, perhitungan biaya,
+ringkasan, validasi, looping, dan data kursus pada proyek KursusKu.

@@ -62,17 +62,8 @@ $courses = [
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= htmlspecialchars($siteName) ?></title>
-   
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background: #fafafa; color: #333; }
-        header, main, footer { max-width: 900px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-        nav a { margin-right: 15px; text-decoration: none; color: #0f766e; }
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-        th { background-color: #f2f2f2; }
-        .badge-available { background: #e7f8ef; color: #146c43; padding: 4px 8px; border-radius: 12px; font-weight: bold; }
-        .badge-full { background: #fdeaea; color: #a61b1b; padding: 4px 8px; border-radius: 12px; font-weight: bold; }
-    </style>
+
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -83,6 +74,7 @@ $courses = [
         <a href="#katalog">Katalog</a>
         <a href="#alur">Cara Daftar</a>
         <a href="#kontak">Kontak</a>
+        <a href="history.php">History</a>
     </nav>
 </header>
 
@@ -108,19 +100,24 @@ $courses = [
             <p>Mahasiswa belajar melalui demonstrasi, latihan, dan evaluasi.</p>
         </article>
     </section>
-
+    
     <section id="katalog">
-        <h2>Katalog Kursus</h2>
-        <table>
+    <h2>Katalog Kursus</h2>
+
+    <p style="text-align: center; margin: 20px 0;">
+        <a href="register.php" class="btn-daftar">Daftar Kursus</a>
+    </p>
+
+    <table>
             <thead>
-                <tr>
-                    <th>Kode</th>
-                    <th>Nama Kursus</th>
-                    <th>Biaya</th>
-                    <th>Mulai</th>
-                    <th>Sisa Kursi</th>
-                    <th>Status</th>
-                </tr>
+              <tr>
+    <th>Kode</th>
+    <th>Nama Kursus</th>
+    <th>Biaya</th>
+    <th>Mulai</th>
+    <th>Sisa Kursi</th>
+    <th>Status</th>
+</tr>
             </thead>
             <tbody>
                 <?php foreach ($courses as $course): ?>
@@ -129,13 +126,15 @@ $courses = [
                     $statusClass = ($status === 'Penuh') ? 'badge-full' : 'badge-available';
                 ?>
                 <tr>
-                    <td><?= htmlspecialchars($course['code']) ?></td>
-                    <td><?= htmlspecialchars(trim($course['name'])) ?></td>
-                    <td><?= rupiah($course['fee']) ?></td>
-                    <td><?= formatTanggal($course['start_date']) ?></td>
-                    <td><?= sisaKursi($course['quota'], $course['registered']) ?></td>
-                    <td><span class="<?= $statusClass ?>"><?= $status ?></span></td>
-                </tr>
+    <td><?= htmlspecialchars($course['code']) ?></td>
+    <td><?= htmlspecialchars(trim($course['name'])) ?></td>
+    <td><?= rupiah($course['fee']) ?></td>
+    <td><?= formatTanggal($course['start_date']) ?></td>
+    <td><?= sisaKursi($course['quota'], $course['registered']) ?></td>
+    <td>
+        <span class="<?= $statusClass ?>"><?= $status ?></span>
+    </td>
+</tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
